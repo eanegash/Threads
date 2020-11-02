@@ -1,6 +1,6 @@
 # Parallel Runs
 
-#### Built a testing project, to test which of the two crystals is better to be used (higher accuracy rate). Within the implementation, generate two instances of calculators with the following calculator: Crystal 1 and Crystal 2.
+#### Built a testing project, for the Calculator class. In the implementation, the project generates two instances of calculators with the following calculator instances: Crystal 1, and Crystal 2.
 
 ##### In order to test the accuracy of each calculator, 20 pairs of random numbers should be generated. An accurate result should be considered a "Successful Calculation", and a skewed result should be considered an "error".
 ##### At the end of the 20 samples each calculator test should produce a "Success Rate" calculated as: 
