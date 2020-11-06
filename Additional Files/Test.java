@@ -184,7 +184,6 @@ class FileManipulation{
         } finally {
             try {
                 if(fileWriter != null){
-                    System.out.println("Attempting to close file writer.");
                     fileWriter.close();
                 }
             } catch (IOException e) {
