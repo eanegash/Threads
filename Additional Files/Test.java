@@ -172,15 +172,24 @@ class FileManipulation{
      * */
     public void writeToFile(String cName, float successRate){
         File f1 = new File("resource/solution.csv");
-
+        FileWriter fileWriter = null;
         try {
-            FileWriter fileWriter = new FileWriter(f1.getName(),true);
+            fileWriter = new FileWriter(f1.getName(),true);
             BufferedWriter bw = new BufferedWriter(fileWriter);
             bw.write(cName + "," + successRate + "\n");
             bw.close();
         } catch (IOException e){
             System.out.println("ERROR: ");
             e.printStackTrace();
+        } finally {
+            try {
+                if(fileWriter != null){
+                    System.out.println("Attempting to close file writer.");
+                    fileWriter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
